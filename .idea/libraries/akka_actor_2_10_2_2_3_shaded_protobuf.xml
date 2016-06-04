@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="akka-actor_2.10-2.2.3-shaded-protobuf">
+    <CLASSES>
+      <root url="jar://E:/cdh5.7_jars/jars/akka-actor_2.10-2.2.3-shaded-protobuf.jar!/" />
+      <root url="jar://E:/cdh5.7_jars/jars/akka-remote_2.10-2.2.3-shaded-protobuf.jar!/" />
+      <root url="jar://E:/cdh5.7_jars/jars/akka-slf4j_2.10-2.2.3-shaded-protobuf.jar!/" />
+      <root url="jar://E:/cdh5.7_jars/jars/scalap-2.10.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

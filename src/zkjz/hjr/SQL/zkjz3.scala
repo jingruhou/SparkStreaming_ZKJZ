@@ -57,31 +57,42 @@ object zkjz3 {
     //将outclinical_diago_rdd数据集转化为数组
     //var counts = outclinical_diago_rdd.toArray()
     var counts = outclinical_diago_rdd
+
+    //outclinical_diago_rdd 的前1条数据：
+    counts.take(1).foreach(println)
+    //outclinical_diago_rdd 的前2条数据：
+    counts.take(2).foreach(println)
+    //outclinical_diago_rdd 的前3条数据：
+    counts.take(3).foreach(println)
+
+
     //（1）这个rdd的长度（先collect，只有collect才会执行spark计算，算出这个rdd的长度）
     val counts_lenght = counts.collect.length
+    val counts_count = counts.count
+    println("outclinical_diago_rdd 的行数为： "+counts_count)
     //（2）怎么循环这个rdd，拿到这个rdd的行编号
     //val line = counts.map()
 
 
-    for(i <- 0 to counts.collect.length - 1){
-      var line = counts(i)
-      var l = line.split("\t")(3)
-      var s = line.split("\t")(0)+"\\t"+line.split("\t")(1)+"\\t"+line.split("\t")(2)+"\\t"
-      var m = l.length
-      while ( m >= 1){
-        var j=0
-        while(j<l.length()-m+1){
-          var s3 = l.substring(j,j + m)
-          if(map.contains(s3)){
-            s += map(s3)+"."
-            l=l.replace(s3,"")
+    (0 to counts_lenght - 1).foreach { case i => {
+          var line = counts(i)
+          var l = line.split("\t")(3)
+          var s = line.split("\t")(0) + "\\t" + line.split("\t")(1) + "\\t" + line.split("\t")(2) + "\\t"
+          var m = l.length
+          while (m >= 1) {
+            var j = 0
+            while (j < l.length() - m + 1) {
+              var s3 = l.substring(j, j + m)
+              if (map.contains(s3)) {
+                s += map(s3) + "."
+                l = l.replace(s3, "")
+              }
+              j = j + 1
+            }
+            m = m - 1
           }
-          j=j+1
+          resultMQ += s
         }
-        m=m-1
-      }
-
-      resultMQ += s
     }
     // resultMQ.foreach(println)
     val resultRDD = sc.parallelize(resultMQ)

@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90944fe2-c540-4cda-88f6-eb6b3af75102" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3$$anonfun$main$2.class" afterPath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3$$anonfun$main$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3$.class" afterPath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3$.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3.class" afterPath="$PROJECT_DIR$/out/production/SparkStreaming_ZKJZ/zkjz/hjr/SQL/zkjz3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala" afterPath="$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala" />
     </list>
     <ignored path="SparkStreaming_ZKJZ.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +27,28 @@
       <file leaf-file-name="zkjz3.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.175">
-              <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.171875">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RDD.class" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/cdh5.7_jars/jars/spark-assembly-1.6.0-cdh5.7.0-hadoop2.6.0-cdh5.7.0.jar!/org/apache/spark/rdd/RDD.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.766667">
+              <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncRDDActions.class" pinned="false" current-in-tab="false">
+        <entry file="jar://E:/cdh5.7_jars/jars/spark-assembly-1.6.0-cdh5.7.0-hadoop2.6.0-cdh5.7.0.jar!/org/apache/spark/rdd/AsyncRDDActions.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.066667">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz0.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -665,6 +681,19 @@
       <option name="number" value="Default" />
       <updated>1465029195112</updated>
     </task>
+    <task id="LOCAL-00001" summary="zkjz3修改for为foreach结构">
+      <created>1465093577262</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1465093577262</updated>
+    </task>
+    <task id="LOCAL-00002" summary="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历">
+      <created>1465096086898</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465096086898</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -705,6 +734,11 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="zkjz3修改for为foreach结构" />
+    <MESSAGE value="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -992,26 +1026,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://E:/scala2.10.5/lib/scala-library.jar!/scala/collection/immutable/Range.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13278688">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz0.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/cdh5.7_jars/jars/spark-assembly-1.6.0-cdh5.7.0-hadoop2.6.0-cdh5.7.0.jar!/org/apache/spark/rdd/AsyncRDDActions.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.066667">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://E:/cdh5.7_jars/jars/spark-assembly-1.6.0-cdh5.7.0-hadoop2.6.0-cdh5.7.0.jar!/org/apache/spark/rdd/RDD.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34918034">
-          <caret line="93" column="6" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+        <state vertical-scroll-proportion="-6.766667">
+          <caret line="101" column="6" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.175">
-          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.171875">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
           <folding />
         </state>
       </provider>

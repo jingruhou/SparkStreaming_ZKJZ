@@ -71,11 +71,11 @@ object zkjz3 {
     val counts_count = counts.count
     println("outclinical_diago_rdd 的行数为： "+counts_count)
     //（2）怎么循环这个rdd，拿到这个rdd的行编号
-    //val line = counts.map()
-
-
+    //提取出所有数据(一次性提取所有数据---有问题！！！！！！)
+    val dataAll = counts.take(counts_count.toInt)
     (0 to counts_lenght - 1).foreach { case i => {
-          var line = counts(i)
+        var line = dataAll(i)
+      //var line = counts(i)
           var l = line.split("\t")(3)
           var s = line.split("\t")(0) + "\\t" + line.split("\t")(1) + "\\t" + line.split("\t")(2) + "\\t"
           var m = l.length
@@ -100,5 +100,7 @@ object zkjz3 {
     //resultRDD.repartition(1).saveAsTextFile("hdfs://10.2.8.11:8020/user/hive/warehouse/test/results/cxm")
     //resultRDD.repartition(1).saveAsTextFile("hdfs://10.2.8.11:8020/user/hive/warehouse/result")
     //resultRDD.repartition(1).saveAsTextFile("hdfs://192.168.13.130:8020/user/houjr/sql/result")
+
+    sc.stop()
   }
 }

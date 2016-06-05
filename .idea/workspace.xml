@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="90944fe2-c540-4cda-88f6-eb6b3af75102" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala" afterPath="$PROJECT_DIR$/src/zkjz/hjr/SQL/zkjz3.scala" />
     </list>
     <ignored path="SparkStreaming_ZKJZ.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -688,7 +687,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465093577262</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历">
+      <created>1465096086898</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1465096086898</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -732,7 +737,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="zkjz3修改for为foreach结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="zkjz3修改for为foreach结构" />
+    <MESSAGE value="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历" />
+    <option name="LAST_COMMIT_MESSAGE" value="zkjz3正确修改foreach结构&#10;使用rdd的take方法提取出所有数据，然后使用foreach遍历" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

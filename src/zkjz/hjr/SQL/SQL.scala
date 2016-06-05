@@ -49,15 +49,12 @@ object SQL {
 
     // 9-1 拿出需要匹配的两个DataFrame的列
     val col_out_diag = outclinical_diago_DataFrame.select("out_diag")
-    val col_diag_name = outclinical_words_DataFrame.select("diag_name")
+    //col_out_diag.foreach(println)
 
-    // 9-2 两个列的行匹配
-    /*col_out_diag match {
-      //case  =>
-    }*/
-    //自定义打印行数据
-    def colFun1(): Unit ={
-      col_diag_name.foreach(println)
-    }
+
+    val col_diag_name = outclinical_words_DataFrame.select("diag_name")
+    col_diag_name.foreach(println)
+
+
   }
 }

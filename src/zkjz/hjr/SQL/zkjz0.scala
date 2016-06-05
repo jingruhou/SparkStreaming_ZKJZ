@@ -15,9 +15,9 @@ object zkjz0 {
 
   def main(args:Array[String]): Unit ={
     // 0 初始化配置
-    //val conf = new SparkConf().setAppName("ZKJZ_SQL").setMaster("local[*]")
+    val conf = new SparkConf().setAppName("ZKJZ_SQL").setMaster("local[*]")
     //val conf = new SparkConf().setAppName("ZKJZ_SQL").setMaster("spark://10.2.8.11:7077")
-    val conf = new SparkConf().setAppName("ZKJZ_SQL")
+    //val conf = new SparkConf().setAppName("ZKJZ_SQL")
     val sc = new SparkContext(conf)
 
     // 2 创建RDD
@@ -26,9 +26,11 @@ object zkjz0 {
     //val outclinical_diago_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/out/p*")
     //val outclinical_words_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/door.db/outclinical_words/p*")
 
-    val outclinical_diago_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/word/p*")
-    val outclinical_words_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/words/p*")
+    //val outclinical_diago_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/word/p*")
+    //val outclinical_words_rdd = sc.textFile("hdfs://10.2.8.11:8020/user/hive/warehouse/words/p*")
 
+    val outclinical_diago_rdd = sc.textFile("E://StreamingData//sql//outclinical_diago530.txt")
+    val outclinical_words_rdd = sc.textFile("E://StreamingData//sql//outclinical_words.txt")
    // val outclinical_diago_rdd = sc.textFile("hdfs://192.168.13.130:8020/user/houjr/sql/outclinical_diago530.txt")
     //val outclinical_words_rdd = sc.textFile("hdfs://192.168.13.130:8020/user/houjr/sql/outclinical_words.txt")
 
@@ -75,14 +77,14 @@ object zkjz0 {
         }
         m=m-1
       }
-
       resultMQ += s
     }
    // resultMQ.foreach(println)
     val resultRDD = sc.parallelize(resultMQ)
     //resultRDD.repartition(1).saveAsTextFile("D://streamingData//sql//test")
     //resultRDD.repartition(1).saveAsTextFile("hdfs://10.2.8.11:8020/user/hive/warehouse/test/results/cxm")
-    resultRDD.repartition(1).saveAsTextFile("hdfs://10.2.8.11:8020/user/hive/warehouse/result")
+    //resultRDD.repartition(1).saveAsTextFile("hdfs://10.2.8.11:8020/user/hive/warehouse/result")
+    resultRDD.repartition(1).saveAsTextFile("E://StreamingData//sql//test")
     //resultRDD.repartition(1).saveAsTextFile("hdfs://192.168.13.130:8020/user/houjr/sql/result")
   }
 }
